@@ -41,7 +41,7 @@ scaled/info.xml: $(SCALED)
 		name="$${filename%.*}"; \
 		echo "    <wallpaper>" >> "build/info.xml"; \
 		echo "        <name>$$name</name>" >> "build/info.xml"; \
-		echo "        <filename>/usr/share/backgrounds/pop/$$(basename "$$file")</filename>" >> "build/info.xml"; \
+		echo "        <filename>$(datadir)/backgrounds/pop/$$(basename "$$file")</filename>" >> "build/info.xml"; \
 		echo "        <options>zoom</options>" >> "build/info.xml"; \
 		echo "        <pcolor>#000000</pcolor>" >> "build/info.xml"; \
 		echo "        <scolor>#000000</scolor>" >> "build/info.xml"; \
