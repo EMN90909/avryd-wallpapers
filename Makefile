@@ -28,7 +28,7 @@ uninstall:
 
 scaled/%: original/%
 	@mkdir -p build scaled
-	convert "$<" -resize "3840x2160^" "build/$*"
+	magick "$<" -resize "3840x2160^" "build/$*"
 	mv "build/$*" "$@"
 
 scaled/info.xml: $(SCALED)
